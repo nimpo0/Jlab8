@@ -1,0 +1,36 @@
+<Configuration status="WARN">
+    <Appenders>
+        <File name="FileLogger" fileName="logs/app.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level: %msg%n%throwable"/>
+        </File>
+
+        <SMTP name="EmailLogger" subject="Critical Error"
+              to="lifekate443@gmail.com"
+              from="anna-anastasiia.bonkovska.oi.2023@lpnu.ua"
+              smtpHost="smtp.gmail.com"
+              smtpPort="465"
+              smtpUsername="anna-anastasiia.bonkovska.oi.2023@lpnu.ua"
+              smtpPassword="behnzbsmjojcbdgc"
+              smtpProtocol="smtps"
+              bufferSize="1"
+              ignoreExceptions="false">
+
+            <Property name="mail.smtp.ssl.enable">true</Property>
+            <Property name="mail.smtp.auth">true</Property>
+
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n%throwable</Pattern>
+            </PatternLayout>
+            <Filters>
+                <MarkerFilter marker="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </SMTP>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="FileLogger"/>
+            <AppenderRef ref="EmailLogger"/>
+        </Root>
+    </Loggers>
+</Configuration>

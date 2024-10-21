@@ -20,7 +20,6 @@ public class Menu {
     }
 
     public void start() {
-
         while (true) {
             printMenu();
             int choice = getUserChoice();
@@ -36,7 +35,7 @@ public class Menu {
                     command.execute();
                     System.out.println("Command executed successfully.");
                 } catch (Exception e) {
-                    System.out.println("Error with executing command");
+                    System.out.println("Error with executing command.");
                 }
             } else {
                 System.out.println("Invalid choice. Please try again.");
@@ -55,7 +54,7 @@ public class Menu {
 
         System.out.println("\t0. Exit");
         System.out.println("==================================================");
-        System.out.print("Choose an option (1-10): ");
+        System.out.print("Choose an option (1-11): ");
     }
 
     private void initializeCommands() {
@@ -69,6 +68,7 @@ public class Menu {
         commandMap.put(8, new FindCompositions(allCompositions, scanner));
         commandMap.put(9, new SaveToFile(collection));
         commandMap.put(10, new LoadFromFile(collection));
+        commandMap.put(11, new CriticalError());
     }
 
     private int getUserChoice() {
@@ -79,7 +79,7 @@ public class Menu {
                 if (choice == 0 || commandMap.containsKey(choice)) {
                     return choice;
                 } else {
-                    System.out.print("Invalid choice. Please enter a number between 0 and 10: ");
+                    System.out.print("Invalid choice. Please enter a number between 0 and 11: ");
                 }
             } catch (NumberFormatException e) {
                 System.out.print("Invalid input, please enter a number: ");

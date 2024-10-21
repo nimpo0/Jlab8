@@ -1,8 +1,12 @@
 package composition;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.Serializable;
 
 public class Composition implements Serializable {
+    private static final Logger logger = LogManager.getLogger(Composition.class);
 
     private String compositionName;
     private String style;
@@ -16,7 +20,7 @@ public class Composition implements Serializable {
         this.author = author;
         this.composDuration = compositionDuration;
         this.lyrics = lyrics;
-        System.out.println("Composition is created: " + compositionName);
+        logger.info("Composition created: {}", compositionName);
     }
 
     public String getCompositionName() {
@@ -39,11 +43,11 @@ public class Composition implements Serializable {
         return lyrics;
     }
 
+    @Override
     public String toString() {
         String comp = String.format("| %-20s | %-15s | %-15s | %-10s | %-30s |%n",
                 compositionName, style, author, composDuration + " s", lyrics);
         String separator = "+----------------------+-----------------+-----------------+------------+--------------------------------+";
         return comp + separator;
     }
-
 }
