@@ -18,11 +18,10 @@
             <Property name="mail.smtp.ssl.enable">true</Property>
             <Property name="mail.smtp.auth">true</Property>
 
-            <PatternLayout>
-                <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n%throwable</Pattern>
-            </PatternLayout>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %msg%n%throwable"/>
+
             <Filters>
-                <MarkerFilter marker="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+                <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
             </Filters>
         </SMTP>
     </Appenders>
@@ -30,7 +29,10 @@
     <Loggers>
         <Root level="info">
             <AppenderRef ref="FileLogger"/>
-            <AppenderRef ref="EmailLogger"/>
         </Root>
+        <Logger name="ErrorLogger" level="error" additivity="false">
+            <AppenderRef ref="FileLogger"/>
+            <AppenderRef ref="EmailLogger"/>
+        </Logger>
     </Loggers>
 </Configuration>

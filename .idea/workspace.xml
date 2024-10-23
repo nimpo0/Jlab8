@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e94bdeff-8112-4a9b-bb50-39e69fd55c9e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/CriticalErrorCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/AddCompos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/AddCompos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/AddToCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/AddToCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/CalculateDuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CalculateDuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CriticalError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CriticalError.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/DeleteFromCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/DeleteFromCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/DisplayAllCompos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/DisplayAllCompos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/DisplayCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/DisplayCollection.java" afterDir="false" />
@@ -19,8 +17,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/LoadFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/LoadFromFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/SaveToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/SaveToFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/SortingByStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/SortingByStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/composition/Composition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/composition/Composition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/composition/ComposCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/composition/ComposCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mainPackage/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mainPackage/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +37,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;nimpo0&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/nimpo0/Jlab8.git&quot;,
+    &quot;accountId&quot;: &quot;b41554f2-95c2-4ab7-a108-14ef2654bc0f&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -95,12 +106,21 @@
       <option name="project" value="LOCAL" />
       <updated>1729262976031</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Створила log4j2.xml файл для логування головних подій у файл та для надсилань помилок на пошту.&#10;Додала клас CriticalError, за допомогю якого надсилаються повідомлення про всі помилки, які виникли у користувача.&#10;Оновила Menu, Composition та AddCompos.">
+      <option name="closed" value="true" />
+      <created>1729526622524</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729526622524</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Вся програма з 6 лабораторної роботи" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вся програма з 6 лабораторної роботи" />
+    <MESSAGE value="Створила log4j2.xml файл для логування головних подій у файл та для надсилань помилок на пошту.&#10;Додала клас CriticalError, за допомогю якого надсилаються повідомлення про всі помилки, які виникли у користувача.&#10;Оновила Menu, Composition та AddCompos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Створила log4j2.xml файл для логування головних подій у файл та для надсилань помилок на пошту.&#10;Додала клас CriticalError, за допомогю якого надсилаються повідомлення про всі помилки, які виникли у користувача.&#10;Оновила Menu, Composition та AddCompos." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

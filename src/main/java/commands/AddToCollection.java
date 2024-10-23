@@ -2,10 +2,15 @@ package commands;
 
 import composition.ComposCollection;
 import composition.Composition;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Scanner;
 
 public class AddToCollection implements Command {
+    private static final Logger logger = LogManager.getLogger(AddToCollection.class);
+    private static final Logger errorLogger = LogManager.getLogger("ErrorLogger");
+
     private ComposCollection collection;
     private ComposCollection allCompositions;
     private Scanner scanner;
@@ -20,6 +25,7 @@ public class AddToCollection implements Command {
     public void execute() {
         if (allCompositions.isAllEmpty()) {
             System.out.println("No available compositions to add.");
+            logger.warn("No available compositions to add.");
             return;
         }
 
@@ -44,8 +50,10 @@ public class AddToCollection implements Command {
         if (compositionToAdd != null) {
             collection.addComposition(compositionToAdd);
             System.out.println("Composition \"" + name + "\" successfully added to the collection.");
+            logger.info("Composition '{}' successfully added to the collection.", name);
         } else {
             System.out.println("Composition not found or it is already in the collection.");
+            errorLogger.error( "Failed to add composition: '{}' not found or already in the collection.", name);
         }
     }
 

@@ -1,11 +1,19 @@
 package commands;
 
 import composition.ComposCollection;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.Marker;
+import org.apache.logging.log4j.MarkerManager;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
 public class SaveToFile implements Command {
+    private static final Logger logger = LogManager.getLogger(SaveToFile.class);
+    private static final Logger errorLogger = LogManager.getLogger("ErrorLogger");
+
     private ComposCollection collection;
 
     public SaveToFile(ComposCollection collection) {
@@ -20,8 +28,10 @@ public class SaveToFile implements Command {
              ObjectOutputStream out = new ObjectOutputStream(fileOut)) {
             out.writeObject(collection);
             System.out.println("Collection successfully saved to file \"" + filename + "\".");
+            logger.info("Collection successfully saved to file '{}'.", filename);
         } catch (IOException e) {
             System.out.println("Error while saving the file.");
+            errorLogger.error("Error while saving the file '{}'.", filename, e);
         }
     }
 

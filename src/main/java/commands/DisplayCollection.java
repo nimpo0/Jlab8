@@ -1,8 +1,12 @@
 package commands;
 
 import composition.ComposCollection;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class DisplayCollection implements Command {
+    private static final Logger logger = LogManager.getLogger(DisplayCollection.class);
+
     private ComposCollection collection;
 
     public DisplayCollection(ComposCollection collection) {
@@ -13,8 +17,8 @@ public class DisplayCollection implements Command {
     public void execute() {
         if (collection.isEmpty()) {
             System.out.println("The collection is empty.");
-        }
-        else {
+            logger.warn("Attempted to display the collection, but it is empty.");
+        } else {
             String header = String.format("| %-20s | %-15s | %-15s | %-10s | %-30s |%n",
                     "Title", "Style", "Author", "Duration", "Lyrics");
             String separator = "+----------------------+-----------------+-----------------+------------+--------------------------------+";
@@ -22,6 +26,7 @@ public class DisplayCollection implements Command {
             System.out.print(header);
             System.out.println(separator);
             collection.displayCompositions();
+            logger.info("Displayed all compositions in the collection.");
         }
     }
 

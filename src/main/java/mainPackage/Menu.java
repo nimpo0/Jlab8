@@ -2,10 +2,17 @@ package mainPackage;
 
 import commands.*;
 import composition.ComposCollection;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.Marker;
+import org.apache.logging.log4j.MarkerManager;
 
 import java.util.*;
 
 public class Menu {
+    private static final Logger logger = LogManager.getLogger(Menu.class);
+    private static final Logger errorLogger = LogManager.getLogger("ErrorLogger");
+
     private ComposCollection collection;
     private ComposCollection allCompositions;
     private Scanner scanner;
@@ -26,6 +33,7 @@ public class Menu {
 
             if (choice == 0) {
                 System.out.println("Exiting the program. Goodbye!");
+                logger.info("Exiting the program.");
                 break;
             }
 
@@ -36,9 +44,11 @@ public class Menu {
                     System.out.println("Command executed successfully.");
                 } catch (Exception e) {
                     System.out.println("Error with executing command.");
+                    errorLogger.error("Error with executing command: {}", e.getMessage());
                 }
             } else {
                 System.out.println("Invalid choice. Please try again.");
+                errorLogger.error("Invalid choice");
             }
         }
     }
@@ -79,10 +89,12 @@ public class Menu {
                 if (choice == 0 || commandMap.containsKey(choice)) {
                     return choice;
                 } else {
-                    System.out.print("Invalid choice. Please enter a number between 0 and 11: ");
+                    System.out.print("Invalid choice. The choice must be between 0 and 11: ");
+                    logger.warn("");
                 }
             } catch (NumberFormatException e) {
                 System.out.print("Invalid input, please enter a number: ");
+                errorLogger.error("Invalid input, the choice must be a number: {}", e.getMessage());
             }
         }
     }

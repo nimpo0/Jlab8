@@ -1,10 +1,15 @@
 package composition;
 
+import commands.SaveToFile;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ComposCollection implements Serializable {
+    private static final Logger logger = LogManager.getLogger(SaveToFile.class);
 
     private List<Composition> compositions;
     private List<Composition> allCompositions;
@@ -67,6 +72,7 @@ public class ComposCollection implements Serializable {
     public void displayCompositions() {
         if (compositions.isEmpty()) {
             System.out.println("The collection is empty.");
+            logger.warn("The collection is empty.");
         } else {
             for (Composition comp : compositions) {
                 System.out.println(comp);
@@ -77,6 +83,7 @@ public class ComposCollection implements Serializable {
     public void displayAllCompositions() {
         if (allCompositions.isEmpty()) {
             System.out.println("No available compositions.");
+            logger.warn("No available compositions.");
         } else {
             for (Composition comp : allCompositions) {
                 System.out.println(comp);
