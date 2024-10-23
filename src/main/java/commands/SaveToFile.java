@@ -3,8 +3,6 @@ package commands;
 import composition.ComposCollection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.Marker;
-import org.apache.logging.log4j.MarkerManager;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -31,7 +29,7 @@ public class SaveToFile implements Command {
             logger.info("Collection successfully saved to file '{}'.", filename);
         } catch (IOException e) {
             System.out.println("Error while saving the file.");
-            errorLogger.error("Error while saving the file '{}'.", filename, e);
+            errorLogger.error("Error while saving the file '{}'.", filename);
         }
     }
 

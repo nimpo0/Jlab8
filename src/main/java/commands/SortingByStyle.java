@@ -4,8 +4,6 @@ import composition.ComposCollection;
 import composition.Composition;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.Marker;
-import org.apache.logging.log4j.MarkerManager;
 
 import java.util.Comparator;
 import java.util.Scanner;
@@ -71,7 +69,7 @@ public class SortingByStyle implements Command {
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input, please enter a whole number.");
-                errorLogger.error("Invalid input for sorting order: {}", input, e);
+                errorLogger.error("Invalid input for sorting order: {}", e.getMessage());
             }
         }
         return choice;

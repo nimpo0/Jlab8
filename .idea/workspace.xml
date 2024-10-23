@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e94bdeff-8112-4a9b-bb50-39e69fd55c9e" name="Changes" comment="">
+    <list default="true" id="e94bdeff-8112-4a9b-bb50-39e69fd55c9e" name="Changes" comment="Видалила з log4j2.xml файлу маркер і додала новий логер для надсилання помилок на пошту.&#10;Додала у кожен клас логування головних подій, попереджень та помилок.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/AddCompos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/AddCompos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/AddToCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/AddToCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/CalculateDuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CalculateDuration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/CriticalError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/CriticalError.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/DeleteFromCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/DeleteFromCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/DisplayAllCompos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/DisplayAllCompos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/DisplayCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/DisplayCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/FindCompositions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/FindCompositions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/LoadFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/LoadFromFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/SaveToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/SaveToFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/commands/SortingByStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/SortingByStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/composition/ComposCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/composition/ComposCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mainPackage/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mainPackage/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
     </list>
@@ -114,13 +108,22 @@
       <option name="project" value="LOCAL" />
       <updated>1729526622524</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Видалила з log4j2.xml файлу маркер і додала новий логер для надсилання помилок на пошту.&#10;Додала у кожен клас логування головних подій, попереджень та помилок.">
+      <option name="closed" value="true" />
+      <created>1729698656488</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729698656488</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Вся програма з 6 лабораторної роботи" />
     <MESSAGE value="Створила log4j2.xml файл для логування головних подій у файл та для надсилань помилок на пошту.&#10;Додала клас CriticalError, за допомогю якого надсилаються повідомлення про всі помилки, які виникли у користувача.&#10;Оновила Menu, Composition та AddCompos." />
-    <option name="LAST_COMMIT_MESSAGE" value="Створила log4j2.xml файл для логування головних подій у файл та для надсилань помилок на пошту.&#10;Додала клас CriticalError, за допомогю якого надсилаються повідомлення про всі помилки, які виникли у користувача.&#10;Оновила Menu, Composition та AddCompos." />
+    <MESSAGE value="Видалила з log4j2.xml файлу маркер і додала новий логер для надсилання помилок на пошту.&#10;Додала у кожен клас логування головних подій, попереджень та помилок." />
+    <option name="LAST_COMMIT_MESSAGE" value="Видалила з log4j2.xml файлу маркер і додала новий логер для надсилання помилок на пошту.&#10;Додала у кожен клас логування головних подій, попереджень та помилок." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

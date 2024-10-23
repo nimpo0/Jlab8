@@ -3,8 +3,6 @@ package commands;
 import composition.ComposCollection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.Marker;
-import org.apache.logging.log4j.MarkerManager;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -33,10 +31,10 @@ public class LoadFromFile implements Command {
             logger.info("Collection successfully loaded from file '{}'.", filename);
         } catch (FileNotFoundException e) {
             System.out.println("File not found: " + filename);
-            errorLogger.error("File not found: {}", filename, e);
+            errorLogger.error("File not found: {}", filename);
         } catch (IOException | ClassNotFoundException e) {
             System.out.println("Error while loading the file.");
-            errorLogger.error("Error while loading the file '{}'.", filename, e);
+            errorLogger.error("Error while loading the file '{}'.", filename);
         }
     }
 
